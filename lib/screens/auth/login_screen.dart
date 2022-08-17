@@ -27,7 +27,7 @@ class _AuthScreenState extends State<AuthScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children:[
               Text("Welcome Back!",style: TextStyle(fontSize:28)),
-              Text("Welcome Back!")
+         
             ]),  
             SvgPicture.asset("assets/images/auth.svg"),
             Container(child: Column(
