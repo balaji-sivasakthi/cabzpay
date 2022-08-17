@@ -14,8 +14,13 @@ class _PaymentSucessScreenState extends State<PaymentSucessScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        
         elevation: 0,
-        leading: Icon(Icons.arrow_back)),
+        backgroundColor:Color.fromRGBO(2, 41, 100, 1),
+        actions: [
+          Icon(Icons.print_outlined,size: 32,)
+        ],
+        leading: Icon(Icons.arrow_back,size: 32,)),
       body: Container(
         padding: EdgeInsets.all(20),
           decoration: BoxDecoration(color: Color.fromRGBO(2, 41, 100, 1)),
