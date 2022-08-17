@@ -2,6 +2,7 @@ import 'package:cabzpay/screens/auth/login_screen.dart';
 import 'package:cabzpay/screens/auth/otp_screen.dart';
 import 'package:cabzpay/screens/home/home_screen.dart';
 import 'package:cabzpay/screens/onboarding_screen.dart';
+import 'package:cabzpay/screens/payment/payment_success_screen.dart';
 import 'package:cabzpay/screens/welcome_screen.dart';
 import "package:flutter/material.dart";
 
@@ -24,6 +25,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return HomeScreen();
+    return PaymentSucessScreen();
   }
 }
