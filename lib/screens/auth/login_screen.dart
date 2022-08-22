@@ -1,7 +1,12 @@
+import 'dart:collection';
+
+import 'package:cabzpay/models/User.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({Key? key}) : super(key: key);
@@ -11,6 +16,10 @@ class AuthScreen extends StatefulWidget {
 }
 
 class _AuthScreenState extends State<AuthScreen> {
+
+   CollectionReference users = FirebaseFirestore.instance.collection('users');
+   Stream User<Map> 
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +43,11 @@ class _AuthScreenState extends State<AuthScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(padding:EdgeInsets.symmetric(vertical:8.0),child: Text("Enter STB Number")),
-               TextField(decoration: InputDecoration(
+               TextField(
+               onChanged: ((value) => setState(() {
+                 
+               })),
+                decoration: InputDecoration(
                 prefixIcon: Icon(Icons.live_tv),
                     border: OutlineInputBorder(),
                     hintText: "Enter STB Number"
