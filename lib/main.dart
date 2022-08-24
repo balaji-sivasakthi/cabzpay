@@ -1,6 +1,7 @@
 // import 'package:cabzpay/screens/auth/login_screen.dart';
 import 'package:cabzpay/screens/auth/login_screen.dart';
 import 'package:cabzpay/screens/auth/otp_screen.dart';
+import 'package:cabzpay/screens/history/transaction_history.dart';
 import 'package:cabzpay/screens/home/home_screen.dart';
 import 'package:cabzpay/screens/onboarding_screen.dart';
 import 'package:cabzpay/screens/payment/payment_failer_screen.dart';
@@ -34,6 +35,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return AuthScreen();
+    return TransactionHistory();
   }
 }

@@ -17,8 +17,6 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
 
-   CollectionReference users = FirebaseFirestore.instance.collection('users');
-   Stream User<Map> 
   
   @override
   Widget build(BuildContext context) {
