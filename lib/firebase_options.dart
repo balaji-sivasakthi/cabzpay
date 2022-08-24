@@ -55,7 +55,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyA4E1r4WhWbffWSveaAFDu9mHKfJ_qi8lk',
-    appId: '1:1039228139227:android:8ec44b4c85638a16203efe',
+    appId: '1:1039228139227:android:0329298d6cd78952203efe',
     messagingSenderId: '1039228139227',
     projectId: 'cabzpay-63864',
     storageBucket: 'cabzpay-63864.appspot.com',
@@ -63,7 +63,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBXzKdB6aWKujIx6kocqqUN_PWhE6kfHlo',
-    appId: '1:1039228139227:ios:6c6bb6cd9e0eae19203efe',
+    appId: '1:1039228139227:ios:fe3bcadb2c0a7288203efe',
     messagingSenderId: '1039228139227',
     projectId: 'cabzpay-63864',
     storageBucket: 'cabzpay-63864.appspot.com',
@@ -73,7 +73,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyBXzKdB6aWKujIx6kocqqUN_PWhE6kfHlo',
-    appId: '1:1039228139227:ios:6c6bb6cd9e0eae19203efe',
+    appId: '1:1039228139227:ios:fe3bcadb2c0a7288203efe',
     messagingSenderId: '1039228139227',
     projectId: 'cabzpay-63864',
     storageBucket: 'cabzpay-63864.appspot.com',

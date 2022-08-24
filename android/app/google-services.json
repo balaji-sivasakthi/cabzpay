@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1039228139227:android:8ec44b4c85638a16203efe",
+        "mobilesdk_app_id": "1:1039228139227:android:0329298d6cd78952203efe",
         "android_client_info": {
-          "package_name": "com.example.cabzpay"
+          "package_name": "com.latrosoft.cabzpay"
         }
       },
       "oauth_client": [

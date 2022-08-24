@@ -16,18 +16,18 @@ class _TransactionHistoryState extends State<TransactionHistory> {
     final double _width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-        appBar: AppBar(
-          leading: Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-          ),
-          backgroundColor: Colors.white,
-          elevation: 0,
-          title: Text(
-            "Transaction Hitory",
-            style: TextStyle(color: Colors.black),
-          ),
-        ),
+        // appBar: AppBar(
+        //   leading: Icon(
+        //     Icons.arrow_back,
+        //     color: Colors.black,
+        //   ),
+        //   backgroundColor: Colors.white,
+        //   elevation: 0,
+        //   title: Text(
+        //     "Transaction Hitory",
+        //     style: TextStyle(color: Colors.black),
+        //   ),
+        // ),
         body: SafeArea(
             child: Padding(
           padding: EdgeInsets.all(16),

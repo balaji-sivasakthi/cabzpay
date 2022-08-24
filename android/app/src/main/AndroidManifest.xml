@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cabzpay">
+    package="com.latrosoft.cabzpay">
    <application
         android:label="cabzpay"
         android:name="${applicationName}"

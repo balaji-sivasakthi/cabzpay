@@ -1,6 +1,4 @@
 import 'dart:convert';
-
-import 'package:cloud_firestore/cloud_firestore.dart';
 class User {
   String id ;
   final String name;

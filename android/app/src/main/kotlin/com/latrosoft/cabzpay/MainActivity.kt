@@ -1,4 +1,4 @@
-package com.example.cabzpay
+package com.latrosoft.cabzpay
 
 import io.flutter.embedding.android.FlutterActivity
 
