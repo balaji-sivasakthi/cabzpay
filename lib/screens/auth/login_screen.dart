@@ -39,13 +39,17 @@ class _AuthScreenState extends State<AuthScreen> {
               children: [
                 Padding(padding:EdgeInsets.symmetric(vertical:8.0),child: Text("Enter STB Number")),
                TextField(
+                keyboardType: TextInputType.number,
                onChanged: ((value) => setState(() {
                  
                })),
+                inputFormatters: [],
                 decoration: InputDecoration(
+                
                 prefixIcon: Icon(Icons.live_tv),
                     border: OutlineInputBorder(),
                     hintText: "Enter STB Number"
+                  
                   ),), 
                
              Container(
