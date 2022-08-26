@@ -1,53 +1,24 @@
 import 'dart:ffi';
 
+import 'package:cabzpay/widgets/custom_bottom_appbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class Dashboard extends StatefulWidget {
+  const Dashboard({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<Dashboard> createState() => _DashboardState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
-    final double _height = MediaQuery.of(context).size.height;
+     final double _height = MediaQuery.of(context).size.height;
     final double _width = MediaQuery.of(context).size.width;
-
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        notchMargin: 10,
-        child: Container(
-          height: 60,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              MaterialButton(
-                onPressed: () {},
-                child: Icon(Icons.home),
-              ),
-              MaterialButton(onPressed: () {}, child: Icon(Icons.history)),
-              MaterialButton(onPressed: () {}, child: Icon(Icons.payment)),
-              MaterialButton(
-                onPressed: () {},
-                child: Icon(Icons.person_outlined),
-              )
-            ],
-          ),
-        ),
-      ),
-      body: SafeArea(
-        child: Container(
+        return Container(
           padding: EdgeInsets.all(16),
           child: Column(children: [
             Row(
@@ -65,56 +36,28 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 CircleAvatar(
-                  backgroundColor: Colors.brown.shade800,
+                  
+                  backgroundColor: Color.fromARGB(255, 0, 0, 5),
                   child: const Text('BS'),
                 )
               ],
             ),
             Container(
-                margin: EdgeInsets.only(top: 60),
+                margin: EdgeInsets.only(top: 20),
                 child: Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    Positioned(
-                      top: -30,
-                      left: 30,
-                      child: Container(
-                        width: _width - (_width / 6),
-                        height: 200,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30),
-                            color: Color.fromRGBO(220, 223, 254, 1)),
-                      ),
-                    ),
-                    Positioned(
-                      top: -20,
-                      left: 10,
-                      child: Container(
-                        margin: EdgeInsets.symmetric(vertical: 10),
-                        width: _width - (_width / 8),
-                        height: 200,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30),
-                            color: Color.fromRGBO(5, 98, 240, 1)),
-                      ),
-                    ),
+                    
                     Positioned(
                       child: Container(
-                        padding: EdgeInsets.all(30),
+                        padding: EdgeInsets.all(20),
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                "BALAJI SIVASAKTHI",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: "Poppins"),
-                              ),
-                              Text(
-                                "**** **** 1234",
+                            
+                              Text("STB Number : "
+                                "76254567189",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 18,
@@ -133,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         "Balance",
                                         style: TextStyle(
                                             color: Colors.white,
-                                            fontSize: 18,
+                                            fontSize: 22,
                                             fontWeight: FontWeight.bold,
                                             fontFamily: "Poppins"),
                                       ),
@@ -141,7 +84,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                         "Rs.1200",
                                         style: TextStyle(
                                             color: Colors.white,
-                                            fontSize: 18,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.normal,
                                             fontFamily: "Poppins"),
                                       ),
                                     ],
@@ -150,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     "Cabzpay",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: 18,
+                                        fontSize: 24,
                                         fontFamily: "Poppins"),
                                   ),
                                 ],
@@ -160,10 +104,23 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: _width - (_width / 10),
                         height: 200,
                         decoration: BoxDecoration(
+                        boxShadow: [
+      BoxShadow(
+        color: Color.fromARGB(255, 8, 1, 76).withOpacity(0.5),
+        spreadRadius: 2,
+        blurRadius: 10,
+        offset: Offset(0, 3), // changes position of shadow
+      ),
+    ],
                             borderRadius: BorderRadius.circular(30),
-                            color: Color.fromRGBO(0, 95, 175, 1)),
+                            gradient: LinearGradient(
+                              end: Alignment.topLeft,
+                              begin: Alignment.bottomRight,
+                              colors: [
+                                Color.fromARGB(255, 1, 6, 56),
+                              Color.fromARGB(255, 0, 54, 135)]),
                       ),
-                    )
+                      ))
                   ],
                 )),
             Container(
@@ -200,14 +157,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       Text(
                         "3/08/2022",
                         style: TextStyle(
-                            color: Color.fromRGBO(5, 98, 240, 1),
+                            color: Color.fromARGB(255, 0, 16, 40),
                             fontSize: 16,
                             fontFamily: "Poppins"),
                       ),
                       Text(
                         "3/09/2022",
                         style: TextStyle(
-                            color: Color.fromRGBO(5, 98, 240, 1),
+                              color: Color.fromARGB(255, 0, 16, 40),
                             fontSize: 16,
                             fontFamily: "Poppins"),
                       ),
@@ -247,9 +204,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.blue,
                       borderRadius: BorderRadius.all(Radius.circular(10))),
                 ),
+          
           ]),
-        ),
-      ),
-    );
+        );
   }
 }

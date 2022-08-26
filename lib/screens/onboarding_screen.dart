@@ -1,3 +1,4 @@
+import 'package:cabzpay/screens/auth/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -33,7 +34,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SvgPicture.asset('assets/images/onboarding-2.svg',width: 400,height: 400,),
+                    SvgPicture.asset(
+                      'assets/images/onboarding-2.svg',
+                      width: 400,
+                      height: 400,
+                    ),
                     Text(
                       "Spend your money smarter",
                       style:
@@ -48,44 +53,44 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 )),
             Container(
                 padding: EdgeInsets.all(20),
-
                 child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset('assets/images/onboarding-1.svg',width: 400,height: 400),
-                Text(
-                  "Spend your money smarter",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
-                ),
-                Text(
-                  "Never overspend your money again with smart budgeting feature.",
-                  textAlign: TextAlign.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset('assets/images/onboarding-1.svg',
+                        width: 400, height: 400),
+                    Text(
+                      "Spend your money smarter",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                    ),
+                    Text(
+                      "Never overspend your money again with smart budgeting feature.",
+                      textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.grey[600]),
-
-                )
-              ],
-            )),
+                    )
+                  ],
+                )),
             Container(
                 padding: EdgeInsets.all(20),
-
                 child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset('assets/images/onboarding-3.svg',width: 400,height: 400),
-                Text(
-                  "Spend your money smarter",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
-                ),
-                Text(
-                  "Never overspend your money again with smart budgeting feature.",
-                  textAlign: TextAlign.center,
-                   style: TextStyle(color: Colors.grey[600]),
-
-                )
-              ],
-            )),
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset('assets/images/onboarding-3.svg',
+                        width: 400, height: 400),
+                    Text(
+                      "Spend your money smarter",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                    ),
+                    Text(
+                      "Never overspend your money again with smart budgeting feature.",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.grey[600]),
+                    )
+                  ],
+                )),
           ],
         ),
         Container(
@@ -103,12 +108,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   count: 3),
               GestureDetector(
                 onTap: () {
-                  if (_label != "continue") {
+                  if (_label != "Continue") {
                     _controller.nextPage(
                         duration: Duration(microseconds: 1000),
-                        curve: Curves.easeInExpo);
-                  }else{
-                   
+                        curve: Curves.ease);
+                  } else {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => AuthScreen()));
                   }
                 },
                 child: Container(
@@ -117,7 +123,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   child: Center(
                     child: Text(
                       _label,
-                      style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16),
                     ),
                   ),
                   decoration: BoxDecoration(

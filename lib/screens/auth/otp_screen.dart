@@ -1,3 +1,5 @@
+import 'package:cabzpay/screens/dashboard/dashboard_screen.dart';
+import 'package:cabzpay/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -107,14 +109,20 @@ Container(child: Row(
                   
                     children: [
                       Text("Resend Code in 09:12"),
-                    Container(
-              height: 50,
-              margin: EdgeInsets.symmetric(vertical: 10),
-              child: Center(child: Text("Continue",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),),
-              decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.all(Radius.circular(10))),
-                ),
+                    GestureDetector(
+                      onTap: (){
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+
+                      },
+                      child: Container(
+                                  height: 50,
+                                  margin: EdgeInsets.symmetric(vertical: 10),
+                                  child: Center(child: Text("Continue",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),),
+                                  decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                                    ),
+                    ),
                     ],
                   )
                 )

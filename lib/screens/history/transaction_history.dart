@@ -16,49 +16,29 @@ class _TransactionHistoryState extends State<TransactionHistory> {
     final double _width = MediaQuery.of(context).size.width;
 
     return Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          title: Text("History", style: TextStyle(color: Colors.black)),
+          leading: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          )),
     
         body: SafeArea(
+          
             child: Padding(
           padding: EdgeInsets.all(16),
-          child: Column(
+          child: ListView(
             children: [
-              Container(
-                child: Column(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          CircleAvatar(
-                            child: Text("C"),
-                            backgroundColor: Colors.blue,
-                          ),
-                          Text(
-                            "Village Pack",
-                            style: TextStyle(color: Colors.white, fontSize: 24),
-                          ),
-                          Text(
-                            'Rs.500',
-                            style: TextStyle(color: Colors.white, fontSize: 24),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      child: Text(
-                        "3:02 PM  Aug 22, 2021",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    )
-                  ],
-                ),
-                height: 140,
-                width: _width,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Color.fromRGBO(0, 4, 40, 1)),
-              )
+              HistoryCard(),
+              HistoryCard(),
+              HistoryCard(),
+              HistoryCard(),
+              HistoryCard(),
+              HistoryCard(),
+              HistoryCard(),
+              HistoryCard(),
             ],
           ),
         )));

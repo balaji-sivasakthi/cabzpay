@@ -1,6 +1,7 @@
 import 'dart:collection';
 
 import 'package:cabzpay/models/User.dart';
+import 'package:cabzpay/screens/auth/otp_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -52,14 +53,19 @@ class _AuthScreenState extends State<AuthScreen> {
                   
                   ),), 
                
-             Container(
-              height: 50,
-              margin: EdgeInsets.symmetric(vertical: 10),
-              child: Center(child: Text("Get OTP",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),),
-              decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.all(Radius.circular(10))),
-                ),
+             GestureDetector(
+              onTap: (){
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>OtpScreen()));
+              },
+               child: Container(
+                height: 50,
+                margin: EdgeInsets.symmetric(vertical: 10),
+                child: Center(child: Text("Get OTP",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),),
+                decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                  ),
+             ),
               ],
             ),)
           ],
