@@ -1,3 +1,4 @@
+import 'package:cabzpay/screens/payment/payment_failer_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -115,7 +116,10 @@ class _PaymentSucessScreenState extends State<PaymentSucessScreen> {
                           ],
                         ),
                       ),
-                      Container(child: Column(
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Column(
+                        
                               children: [
                                  Text(
                         "Total Amount",
@@ -183,20 +187,25 @@ class _PaymentSucessScreenState extends State<PaymentSucessScreen> {
                     ))
               ],
             ),
-            Container(
-              height: 50,
-              child: Center(
-                child: Text(
-                  "Back to home",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16),
+            GestureDetector(
+              onTap: (){
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>PaymentFailureScreen()));
+              },
+              child: Container(
+                height: 50,
+                child: Center(
+                  child: Text(
+                    "Back to home",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16),
+                  ),
                 ),
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
               ),
-              decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.all(Radius.circular(10))),
             ),
           ],
         ),

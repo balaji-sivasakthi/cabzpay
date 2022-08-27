@@ -1,5 +1,6 @@
 import 'dart:ffi';
 
+import 'package:cabzpay/screens/payment/payment_success_screen.dart';
 import 'package:cabzpay/widgets/custom_bottom_appbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -50,14 +51,13 @@ class _DashboardState extends State<Dashboard> {
                     
                     Positioned(
                       child: Container(
-                        padding: EdgeInsets.all(20),
+                        padding: EdgeInsets.all(30),
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                             
-                              Text("STB Number : "
-                                "76254567189",
+                              Text("76254567189",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 18,
@@ -192,18 +192,23 @@ class _DashboardState extends State<Dashboard> {
                 ],
               ),
             ),
-           Container(
-                  height: 50,
-                  child: Center(
-                    child: Text(
-                      "Pay Now",
-                      style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),
+           GestureDetector(
+            onTap: (){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>PaymentSucessScreen()));
+            },
+             child: Container(
+                    height: 50,
+                    child: Center(
+                      child: Text(
+                        "Pay Now",
+                        style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),
+                      ),
                     ),
+                    decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
                   ),
-                  decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.all(Radius.circular(10))),
-                ),
+           ),
           
           ]),
         );
