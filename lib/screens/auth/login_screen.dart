@@ -25,7 +25,7 @@ class _AuthScreenState extends State<AuthScreen> {
         padding: EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
          
             Column(
@@ -34,7 +34,7 @@ class _AuthScreenState extends State<AuthScreen> {
               Text("Welcome Back!",style: TextStyle(fontSize:28)),
          
             ]),  
-            SvgPicture.asset("assets/images/auth.svg"),
+            SvgPicture.asset("assets/images/auth.svg",height: 250,width: double.infinity,),
             Container(child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -59,7 +59,7 @@ class _AuthScreenState extends State<AuthScreen> {
               },
                child: Container(
                 height: 50,
-                margin: EdgeInsets.symmetric(vertical: 10),
+                margin: EdgeInsets.only(top: 10),
                 child: Center(child: Text("Get OTP",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),),
                 decoration: BoxDecoration(
                         color: Colors.blue,
